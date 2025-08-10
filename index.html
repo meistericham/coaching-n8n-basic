@@ -15,10 +15,11 @@
     .ring-brand{box-shadow:0 0 0 3px rgba(253,224,71,.25)}
     .pulse{animation:pulse 1.6s infinite}
     @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}
+    .hint{font-size:.8rem;color:#a1a1aa}
   </style>
 </head>
 <body class="antialiased">
-  <!-- START NEW VERSION -->
+  <!-- START NEW VERSION (Webhook-ready) -->
   <!-- Header (simplified for single CTA focus) -->
   <header class="sticky top-0 z-30 border-b border-white/10 bg-black/60 backdrop-blur">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -67,7 +68,7 @@
       <div>
         <h3 class="text-xl font-bold text-yellow-300">Daripada Blur → Hasil Nyata</h3>
         <ul class="mt-3 space-y-2 text-zinc-200 list-disc list-inside">
-          <li>Bina AI Whatsapp guna workflow n8n — Create <em>Sam Izrin</em> untuk jawab soalan berkaitan RWMF2025</li>
+          <li>Bina AI Chat guna workflow n8n — mudahkan kerja harian</li>
           <li>Bantu rakan mudahkan <em>data filtering</em> dengan n8n</li>
           <li>Setup auto follow-up dengan borang & notifikasi</li>
         </ul>
@@ -168,7 +169,7 @@
           <span class="text-xs badge text-white px-2 py-1 rounded-full">Special Offer</span>
         </div>
         <p class="mt-2 text-zinc-400 text-sm">Harga special ini sah sehingga <strong>16 September 2025</strong>. Slot terhad setiap bulan (coaching 1-on-1).</p>
-        <a id="cta" href="https://wa.me/60172220380?text=Saya%20nak%20Coaching%20n8n" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-yellow-300 text-black px-6 py-3 font-semibold hover:bg-yellow-200 transition ring-brand">Saya Nak Booking Slot Coaching</a>
+        <a id="cta" href="#optin" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-yellow-300 text-black px-6 py-3 font-semibold hover:bg-yellow-200 transition ring-brand">Saya Nak Booking Slot Coaching</a>
         <p class="text-xs text-zinc-500 mt-2">*Boleh tukar ke URL Ordersini nanti.</p>
         <label class="mt-4 block text-sm text-zinc-400">Tambah add-on: <input type="checkbox" class="align-middle mr-2"> 5 Template n8n siap-ubah (+RM49)</label>
       </div>
@@ -239,13 +240,14 @@
   <section id="optin">
     <div class="max-w-3xl mx-auto px-4 py-16 text-center">
       <h3 class="text-xl sm:text-2xl font-extrabold">Sertai Siri 5 Hari: "Automasi Pertama" (Percuma)</h3>
-      <p class="mt-2 text-zinc-300">Masukkan nama & email. Anda akan dibawa ke WhatsApp untuk mesej prefilled. (Saya akan hantar 5 emel ringkas – shortcut & template.)</p>
+      <p class="mt-2 text-zinc-300">Isi nama & email → klik butang <strong>Hantar & Buka WhatsApp</strong>.</p>
+      <p class="hint mt-1">Tindakan anda akan: (1) Hantar maklumat ke sistem untuk mula 5-hari, (2) Buka WhatsApp dengan mesej prefilled.</p>
       <form id="leadForm" class="mt-6 grid sm:grid-cols-3 gap-3">
         <input id="name" type="text" required placeholder="Nama" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-yellow-300" />
         <input id="email" type="email" required placeholder="Email" class="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-3 outline-none focus:border-yellow-300" />
         <button type="submit" class="rounded-xl bg-yellow-300 text-black font-semibold px-4 py-3 hover:bg-yellow-200">Hantar & Buka WhatsApp</button>
       </form>
-      <p class="mt-3 text-xs text-zinc-500">*Tip: Anda boleh terus WhatsApp tanpa isi form di butang kuning lain di halaman ini.</p>
+      <p class="mt-3 text-xs text-zinc-500">*Atau terus WhatsApp melalui butang hijau terapung di bawah.</p>
     </div>
   </section>
 
@@ -253,13 +255,13 @@
   <section class="">
     <div class="max-w-6xl mx-auto px-4 py-16 text-center">
       <h2 class="text-2xl sm:text-3xl font-extrabold">Automation Pertama Anda Bermula Hari Ini</h2>
-      <p class="mt-2 text-zinc-300">WhatsApp saya dengan mesej: <span class="font-semibold">“Saya nak Coaching n8n”</span>. Klik butang di bawah.</p>
-      <a href="https://wa.me/60172220380?text=Saya%20nak%20Coaching%20n8n" class="inline-flex mt-6 items-center rounded-2xl bg-yellow-300 text-black px-6 py-3 font-semibold hover:bg-yellow-200 transition ring-brand">Tempah Slot Coaching Sekarang</a>
+      <p class="mt-2 text-zinc-300">WhatsApp saya dengan mesej: <span class="font-semibold">“START5”</span>. Klik butang di bawah.</p>
+      <a href="#optin" class="inline-flex mt-6 items-center rounded-2xl bg-yellow-300 text-black px-6 py-3 font-semibold hover:bg-yellow-200 transition ring-brand">Tempah Slot Coaching Sekarang</a>
     </div>
   </section>
 
   <!-- Floating WhatsApp -->
-  <a href="https://wa.me/60172220380?text=Saya%20nak%20Coaching%20n8n" class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-400 transition" aria-label="WhatsApp Sam Automation">WhatsApp</a>
+  <a id="waFloat" href="#" class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-400 transition" aria-label="WhatsApp Sam Automation">WhatsApp</a>
 
   <!-- Footer -->
   <footer class="border-t border-white/10">
@@ -268,52 +270,95 @@
       <div class="flex items-center gap-4">
         <a href="#pricing" class="hover:text-white">Harga</a>
         <a href="#faq" class="hover:text-white">FAQ</a>
-        <a href="#cta" class="hover:text-white">Tempah Slot</a>
+        <a href="#optin" class="hover:text-white">Tempah Slot</a>
       </div>
     </div>
   </footer>
 
-  <!-- Simple client-side handler for opt-in redirect -->
+  <!-- Simple client-side handler (Webhook + WhatsApp redirect) -->
   <script>
-    // Set current year safely
+    // ======= Config (edit these placeholders) =======
+    const N8N_WEBHOOK_URL = '[[N8N_WEBHOOK_URL]]'; // e.g. https://n8n.domain.com/webhook/lead-intake
+    const WHATSAPP_NUMBER = '[[WHATSAPP_NUMBER]]'; // e.g. 60172220380 (without +)
+    const WHATSAPP_PREFILL = '[[WHATSAPP_PREFILL]]'; // e.g. START5
+    // ===============================================
+
+    // Year footer
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Wrap logic in an IIFE to avoid leaking globals and variable name conflicts
+    // Centralized config normalization & warnings
+    const CFG = (() => {
+      const rawNum = (typeof WHATSAPP_NUMBER === 'string' ? WHATSAPP_NUMBER.trim() : '').replace(/^\+/, '');
+      const num = rawNum && !rawNum.startsWith('[') ? rawNum : '60172220380';
+      const prefillRaw = (typeof WHATSAPP_PREFILL === 'string' ? WHATSAPP_PREFILL.trim() : 'START5');
+      const pf = prefillRaw && !prefillRaw.startsWith('[') ? prefillRaw : 'START5';
+      const hookRaw = (typeof N8N_WEBHOOK_URL === 'string' ? N8N_WEBHOOK_URL.trim() : '');
+      const webhook = hookRaw && !hookRaw.startsWith('[') ? hookRaw : '';
+      if (!webhook) console.warn('[Config] N8N_WEBHOOK_URL not set. Skipping webhook POST.');
+      return { num, pf, webhook };
+    })();
+
+    // Helper: safe WhatsApp URL
+    const buildWaUrl = (msg) => `https://wa.me/${CFG.num}?text=${encodeURIComponent(msg)}`;
+
+    // Set floating WhatsApp link
+    (function setWaFloat(){
+      const a = document.getElementById('waFloat');
+      if (a) a.href = buildWaUrl(CFG.pf);
+    })();
+
+    // Attach handler in isolated scope
     (() => {
       const leadFormEl = document.getElementById('leadForm');
-      if (!leadFormEl) return; // Guard: stop if form not present
+      if (!leadFormEl) return;
 
-      leadFormEl.addEventListener('submit', (e) => {
+      leadFormEl.addEventListener('submit', async (e) => {
         e.preventDefault();
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
+        const submitBtn = leadFormEl.querySelector('button[type="submit"]');
         const name = (nameInput?.value || '').trim();
         const email = (emailInput?.value || '').trim();
 
-        // Basic front-end validation (extra safety)
-        if (!name || !email) {
-          alert('Sila isi nama dan email.');
-          return;
+        if (!name || !email) { alert('Sila isi nama dan email.'); return; }
+
+        const prevLabel = submitBtn?.textContent;
+        if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Memproses...'; }
+
+        // 1) Hantar ke n8n webhook (optional if not set yet)
+        const url = CFG.webhook || null;
+        try {
+          if (url) {
+            await Promise.race([
+              fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, source: 'LP_V2', ts: Date.now() }),
+                keepalive: true
+              }),
+              new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), 2500))
+            ]);
+          }
+        } catch (_) {
+          console.warn('[webhook] skip/fail, continue to WhatsApp');
         }
 
-        // Persist locally (optional follow-up)
-        try {
-          localStorage.setItem('lead_name', name);
-          localStorage.setItem('lead_email', email);
-        } catch (_) {}
-
-        const msg = encodeURIComponent(`Saya nak Coaching n8n. Nama: ${name} | Email: ${email}`);
-        window.location.href = `https://wa.me/60172220380?text=${msg}`;
+        // 2) Redirect ke WhatsApp dengan mesej prefilled yang jelas
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = prevLabel || 'Hantar & Buka WhatsApp'; }
+        const prefill = CFG.pf;
+        // Fallback beacon if fetch failed before redirect (best-effort, no-cors)
+        if (url && typeof navigator !== 'undefined' && navigator.sendBeacon && !window.__hookSent) {
+          try { window.__hookSent = navigator.sendBeacon(url, new Blob([JSON.stringify({ name, email, source: 'LP_V2_BEACON', ts: Date.now() })], { type: 'application/json' })); } catch(_){}
+        }
+        window.location.href = buildWaUrl(prefill);
       });
     })();
 
-    // --- Lightweight "tests" to ensure no global leaks or conflicts ---
+    // Smoke tests (non-blocking)
     (() => {
-      // 1) Ensure we didn't create a global 'leadFormEl'
+      console.log('[LP] N8N webhook set?', Boolean(CFG.webhook));
+      console.log('[LP] WhatsApp number:', CFG.num);
       console.assert(typeof window.leadFormEl === 'undefined', 'leadFormEl should not be global');
-      // 2) Ensure script can re-run without SyntaxError (no duplicate const)
-      // If the code runs twice, variables are scoped in IIFE, so no duplicate declarations occur.
-      console.log('[TEST] Script isolation OK: No duplicate variable declarations expected.');
     })();
   </script>
 </body>
